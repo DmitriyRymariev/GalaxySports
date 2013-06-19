@@ -1,0 +1,13 @@
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\GalaxySports.UnitTests.dll
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\GalaxySports.UnitTests.pdb
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\EntityFramework.dll
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\GalaxySports.Domain.dll
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\GalaxySports.WebUI.dll
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\Moq.dll
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\Ninject.dll
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\nunit.framework.dll
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\GalaxySports.Domain.pdb
+F:\GalaxySports\GalaxySports.UnitTests\bin\Debug\GalaxySports.WebUI.pdb
+F:\GalaxySports\GalaxySports.UnitTests\obj\Debug\GalaxySports.UnitTests.csprojResolveAssemblyReference.cache
+F:\GalaxySports\GalaxySports.UnitTests\obj\Debug\GalaxySports.UnitTests.dll
+F:\GalaxySports\GalaxySports.UnitTests\obj\Debug\GalaxySports.UnitTests.pdb

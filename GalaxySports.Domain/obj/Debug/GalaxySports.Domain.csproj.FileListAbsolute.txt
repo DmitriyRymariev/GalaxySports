@@ -1,0 +1,9 @@
+F:\GalaxySports\GalaxySports.Domain\bin\Debug\GalaxySports.Domain.dll.config
+F:\GalaxySports\GalaxySports.Domain\bin\Debug\GalaxySports.Domain.dll
+F:\GalaxySports\GalaxySports.Domain\bin\Debug\GalaxySports.Domain.pdb
+F:\GalaxySports\GalaxySports.Domain\bin\Debug\EntityFramework.dll
+F:\GalaxySports\GalaxySports.Domain\bin\Debug\Moq.dll
+F:\GalaxySports\GalaxySports.Domain\bin\Debug\Ninject.dll
+F:\GalaxySports\GalaxySports.Domain\obj\Debug\GalaxySports.Domain.dll
+F:\GalaxySports\GalaxySports.Domain\obj\Debug\GalaxySports.Domain.pdb
+F:\GalaxySports\GalaxySports.Domain\obj\Debug\GalaxySports.Domain.csprojResolveAssemblyReference.cache

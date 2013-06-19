@@ -1,0 +1,36 @@
+﻿@model IEnumerable<GalaxySports.Domain.Entities.News>
+@{
+    ViewBag.Title = "Galaxy Sports";
+}
+
+<div id="banner">
+    <div id="slider">
+        <div class="viewer">
+            <div class="reel">
+                <div class="slide">
+                    <img src="@Url.Content("~/Content/Images/Velo.jpg")" width="600" height="450" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="@Url.Content("~/Content/Images/Family.jpg")" width="600" height="450" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#slider').slidertron({
+            viewerSelector: '.viewer',
+            reelSelector: '.viewer .reel',
+            slidesSelector: '.viewer .reel .slide',
+            advanceDelay: 5000,
+            speed: 'slow'
+        });
+    </script>
+</div>
+
+@foreach (var news in Model)
+{
+    if (news.ShowOnMainPage)
+    {
+        Html.RenderPartial("NewsSummary", news);
+    }
+}

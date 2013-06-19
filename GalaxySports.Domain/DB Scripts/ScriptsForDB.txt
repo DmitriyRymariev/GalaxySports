@@ -1,0 +1,268 @@
+﻿/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+/****** Object:  Table [dbo].[News]    Script Date: 10-Jun-13 11:47:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[News](
+	[NewsID] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [nvarchar](500) NOT NULL,
+	[Body] [nvarchar](1024) NOT NULL,
+	[ShowOnMainPage] [bit] NULL,
+	[PublishTime] [datetime] NOT NULL,
+	[ImageData] [varbinary](max) NULL,
+	[ImageMimeType] [varchar](50) NULL,
+ CONSTRAINT [PK_News] PRIMARY KEY CLUSTERED 
+(
+	[NewsID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+/****** Object:  Table [dbo].[Categories]    Script Date: 10-Jun-13 22:36:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Categories](
+	[CategoryID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[ImageData] [varbinary](max) NULL,
+	[ImageMimeType] [varchar](50) NULL,
+	[Deleted] [bit] NULL,
+ CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED 
+(
+	[CategoryID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+/****** Object:  Table [dbo].[Products]    Script Date: 10-Jun-13 11:19:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Products](
+	[ProductID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](100) NOT NULL,
+	[Description] [nvarchar](1024) NOT NULL,
+	[Price] [decimal](16, 2) NOT NULL,
+	[Category] [int] NOT NULL,
+    [Deleted] [bit] NULL,
+	[ImageData] [varbinary](max) NULL,
+	[ImageMimeType] [varchar](50) NULL,
+ CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
+(
+	[ProductID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+/****** Object:  Table [dbo].[Users]    Script Date: 11-Jun-13 03:47:24 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Users](
+	[UserID] [int] IDENTITY(1,1) NOT NULL,
+	[Login] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Surnaame] [nvarchar](50) NOT NULL,
+	[PhoneNumber] [nvarchar](50) NOT NULL,
+	[EmailAddress] [nvarchar](50) NOT NULL,
+	[Role] [int] NOT NULL,
+	[Deleted] [bit] NULL,
+ CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+/****** Object:  Table [dbo].[Comments]    Script Date: 11-Jun-13 04:57:32 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Comments](
+	[CommentID] [int] IDENTITY(1,1) NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+	[CommentText] [nvarchar](1024) NOT NULL,
+	[Time] [datetime] NOT NULL,
+ CONSTRAINT [PK_Comments] PRIMARY KEY CLUSTERED 
+(
+	[CommentID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+/****** Object:  Table [dbo].[Orders]    Script Date: 11-Jun-13 06:30:20 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Orders](
+	[OrderID] [int] IDENTITY(1,1) NOT NULL,
+	[SubmittedBy] [int] NOT NULL,
+	[ProcessedBy] [int] NOT NULL,
+	[Paid] [bit] NULL,
+	[Delivered] [bit] NULL,
+	[TheOrderIsExecuted] [bit] NULL,
+	[UserName] [nvarchar](50) NOT NULL,
+	[PhoneNumber] [nvarchar](50) NOT NULL,
+	[Address] [nvarchar](50) NOT NULL,
+	[City] [nvarchar](50) NOT NULL,
+	[State] [nvarchar](50) NOT NULL,
+	[Country] [nvarchar](50) NOT NULL,
+	[GiftWrap] [bit] NULL,
+	[RushOrder] [bit] NULL,
+	[PaymentMethod] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+/****** Object:  Table [dbo].[OrderProducts]    Script Date: 11-Jun-13 06:30:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[OrderProducts](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[OrderID] [int] NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[Price] [decimal](16, 2) NOT NULL,
+ CONSTRAINT [PK_OrderProducts] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+INSERT INTO [dbo].[Users]
+           ([Login]
+           ,[Password]
+           ,[Name]
+           ,[Surnaame]
+           ,[PhoneNumber]
+           ,[EmailAddress]
+           ,[Role]
+           ,[Deleted])
+     VALUES
+           ('Admin'
+           ,'AdminPassword'
+           ,'Admin'
+           ,'Admin'
+           ,'3333333333'
+           ,'adminMail@mail.com'
+           ,3
+           ,0)
+GO
+
+/*============================================================================================================================================================================================*/
+
+USE [GalaxySports]
+GO
+
+INSERT INTO [dbo].[Users]
+           ([Login]
+           ,[Password]
+           ,[Name]
+           ,[Surnaame]
+           ,[PhoneNumber]
+           ,[EmailAddress]
+           ,[Role]
+           ,[Deleted])
+     VALUES
+           ('Service'
+           ,'ServicePassword'
+           ,'Service'
+           ,'Service'
+           ,'2222222222'
+           ,'serviceMail@mail.com'
+           ,2
+           ,0)
+GO

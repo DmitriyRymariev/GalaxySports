@@ -1,0 +1,22 @@
+﻿@model GalaxySports.WebUI.Models.ProductListViewModel
+@using GalaxySports.WebUI.HtmlHelpers
+
+@{
+    if (Model.CurrentCategory == null)
+    {
+        ViewBag.Title = "Products";
+    }
+    else
+    {
+        ViewBag.Title = Model.CurrentCategory;
+    }
+}
+
+@foreach (var p in Model.Products)
+{
+    Html.RenderPartial("ProductSummary", p);
+}
+
+<div class="pager">
+    @PagingHelpers.PageLinks(null, Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
+</div>

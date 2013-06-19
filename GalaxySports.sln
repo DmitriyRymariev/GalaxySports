@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxySports.Domain", "GalaxySports.Domain\GalaxySports.Domain.csproj", "{E3F117CE-0434-436F-926A-42593A81FB68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxySports.WebUI", "GalaxySports.WebUI\GalaxySports.WebUI.csproj", "{4B9676FC-C2D7-4760-BF7A-8E2F3BD59CF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxySports.UnitTests", "GalaxySports.UnitTests\GalaxySports.UnitTests.csproj", "{672E1249-53F9-41C0-9347-EB149CDEF9F7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dorymariev.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GalaxySports.Domain\\GalaxySports.Domain.csproj
+		SccProjectName1 = GalaxySports.Domain
+		SccLocalPath1 = GalaxySports.Domain
+		SccProjectUniqueName2 = GalaxySports.WebUI\\GalaxySports.WebUI.csproj
+		SccProjectName2 = GalaxySports.WebUI
+		SccLocalPath2 = GalaxySports.WebUI
+		SccProjectUniqueName3 = GalaxySports.UnitTests\\GalaxySports.UnitTests.csproj
+		SccProjectName3 = GalaxySports.UnitTests
+		SccLocalPath3 = GalaxySports.UnitTests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3F117CE-0434-436F-926A-42593A81FB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F117CE-0434-436F-926A-42593A81FB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F117CE-0434-436F-926A-42593A81FB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F117CE-0434-436F-926A-42593A81FB68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B9676FC-C2D7-4760-BF7A-8E2F3BD59CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B9676FC-C2D7-4760-BF7A-8E2F3BD59CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B9676FC-C2D7-4760-BF7A-8E2F3BD59CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B9676FC-C2D7-4760-BF7A-8E2F3BD59CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{672E1249-53F9-41C0-9347-EB149CDEF9F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672E1249-53F9-41C0-9347-EB149CDEF9F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672E1249-53F9-41C0-9347-EB149CDEF9F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672E1249-53F9-41C0-9347-EB149CDEF9F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
